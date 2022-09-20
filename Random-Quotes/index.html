@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .quote {
+            display: grid; 
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 1fr 1fr 1fr; 
+            gap: 0px 0px; 
+            grid-template-areas: 
+                "quote__content"
+                "quote__content"
+                "quote__content"
+                "generate"; 
+
+            background-color: aliceblue;
+            max-width: 60%;
+            padding: 50px;
+
+            box-shadow: 0 0 30px rgb(136, 156, 247);
+        }
+
+        .quote__content {
+            grid-area: quote__content;
+            padding: 80px 0px 80px 0px;
+
+            font-size: 2em;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .quote__content cite {
+            margin-top: 20px;
+        }
+
+        .generate {
+            display: grid;
+            place-items: center;
+        }
+
+        .generate__button {
+            padding: 20px;
+            background-color: white;
+            mix-blend-mode: difference;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <article class="quote">
+        <div class="quote__content">
+            <q>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore possimus sed ducimus officia error
+                itaque voluptate eligendi mollitia ad, tempora aspernatur nam molestias laudantium, odit amet optio ex
+                earum magnam?
+            </q>
+            <cite>Leonardo da Vinci</cite>
+        </div>
+        <div class="generate">
+            <button class="generate__button">New Quote</button>
+        </div>
+    </article>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="random-quotes.js"></script>
+
+</body>
+
+</html>
